@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="utf-8">
+<title>Document</title>
+</head>
+
+<body> 
+	<script scr="app.js">
+	'use strict'
+
+/* Объявить две переменные a и b и задать им целочисленные произвольные начальные
+значения. Затем написать скрипт, который работает по следующему принципу:
+если a и b положительные, вывести их разность;
+если а и b отрицательные, вывести их произведение;
+если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.*/
+	
+	let	a = parseInt(prompt("Введите целое число a"));
+    let b = parseInt(prompt("Введите целое число b"));
+
+function calculate(param1, param2){
+	// если a и b положительные, вывести их разность;
+	if (param1 >= 0 && param2 >= 0){
+		return param1 - param2;
+	}
+
+	//если а и b отрицательные, вывести их произведение;
+	else if (param1 < 0 && param2 < 0) {
+		return param1 * param2;
+	}
+
+	//если а и b разных знаков, вывести их сумму;
+	else if (( param1 >= 0 && param2 < 0) || (param1 < 0 && param2 >= 0)) {
+		return param1 + param2;
+	}
+
+	alert('Введены некорректные данные');
+}
+
+	alert(calculate (a,b));
+
+
+</script>
+
+</body>
